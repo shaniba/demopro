@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <h2>Products</h2>
+{{product}}
+ <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Shop Detail</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Shop</a></li>
+                        <li class="breadcrumb-item active">LOGIN</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container w-50 m-5 p-5 border border-1 border-dark">
+    <h1>LOGIN</h1>
+<form method="POST">
+
+  {% csrf_token %}
+    {{form}}
+      <div class="mb-3">
+            <input type="submit" class="btn btn-light" value="Submit">
+        </div>
+</form>
+</div>
+{% endblock %}
+    <!-- End All Title Box -->
